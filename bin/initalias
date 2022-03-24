@@ -1,0 +1,3 @@
+op=$(docker ps -a)
+conid=$(echo $op | awk -F 'NAMES' '{print $2}'| awk '{print $1}')
+alias term='docker exec -it $conid /bin/bash'
