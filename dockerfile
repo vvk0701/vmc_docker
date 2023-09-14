@@ -5,5 +5,5 @@ COPY bin/initalias /usr/local/bin
 USER root
 RUN apt-get update
 RUN apt-get install -y python3-pip
-RUN pip install --upgrade pip
-RUN pip install dcli
+RUN pip install --upgrade pip --break-system-packages
+RUN pip install dcli --break-system-packages
